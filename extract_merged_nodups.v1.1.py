@@ -12,12 +12,12 @@ parser = argparse.ArgumentParser(
                     prog='The process of generating intermediate files for resolution caltulate',
                     description='The process of generating intermediate files for resolution caltulate')
 
-parser.add_argument("--bam", type=str, nargs="+", required=True, help="List of BAM files")
+parser.add_argument("--bam", type=str, required=True, help="List of BAM files sep by ','")
 parser.add_argument("--mapq_threshold", type=int, default=10, help="MAPQ threshold for filtering")
 # 解析参数
 args = parser.parse_args()
 # 使用参数
-filepath = args.bam
+filepath = args.bam.rstrip().split(',')
 mapq_threshold = args.mapq_threshold
 
 
