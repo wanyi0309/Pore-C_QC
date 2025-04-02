@@ -1,3 +1,5 @@
+######original path : https://github.com/aidenlab/juicer/blob/main/misc/calculate_map_resolution.sh
+
 #!/bin/bash
 ##########
 #The MIT License (MIT)
